@@ -3,20 +3,24 @@ using UnityEngine;
 public class PlayerAbilityManager : MonoBehaviour
 {
     private IPlayerController playerAction;
+    private PlayerController playerCon;
+    private PlayerAnimation _playerAnim;
     [SerializeField] private Magnesis magnesis;
+    [SerializeField] private Bomb Squarebomb;
+    [SerializeField] private Bomb Spherebomb;
+
+    [Header("Prefabs")]
+    [SerializeField] private GameObject SquareBomb_prefab;
+    [SerializeField] private GameObject SphereBomb_prefab;
 
     [Header("UI")]
     public GameObject Magnesis_UI;
-    enum AbilityState
-    {
-        None,
-        Magnesis
-    }
-    AbilityState currentAbility = AbilityState.None;
 
     private void Start()
     {
         playerAction = GetComponent<IPlayerController>();
+        playerCon = GetComponent<PlayerController>();
+        _playerAnim = GetComponent<PlayerAnimation>();
     }
     private void Update()
     {
@@ -24,24 +28,61 @@ public class PlayerAbilityManager : MonoBehaviour
     }
     public void PlayerAbility()
     {
-        if(playerAction.isMagnesis)
+        switch (playerCon.Ability)
         {
-            magnesis.Activate(transform);
-            HandleAbilityUI(Magnesis_UI);
-        }
-        else
-        {
-            CancelAbility();
+            case PlayerController.AbilityState.None:
+                CancelAllAbility();
+                break;
+            case PlayerController.AbilityState.Magnesis:
+                magnesis.Activate(transform,null);
+                HandleAbilityUI(Magnesis_UI);
+                break;
+            case PlayerController.AbilityState.SquareBomb:
+                Squarebomb.Activate(transform,SquareBomb_prefab);
+
+                break;
+            case PlayerController.AbilityState.SphereBomb:
+                Spherebomb.Activate(transform, SphereBomb_prefab);
+                break;
+            case PlayerController.AbilityState.Stasis:
+                break;
+            case PlayerController.AbilityState.Cyonis:
+                break;
         }
     }
-    public void CancelAbility()
+    public void CancelAbility(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                magnesis.CancelAbility(transform);
+                break;
+            case 1:
+                Squarebomb.CancelAbility(transform);
+                break;
+            case 2:
+                Spherebomb.CancelAbility(transform);
+                break;
+        }
+    }
+    public void CancelAllAbility()
     {
         magnesis.CancelAbility(transform);
+        Squarebomb.CancelAbility(transform);
+        Spherebomb.CancelAbility(transform);
     }
     private void HandleAbilityUI(GameObject CurrentIU)
     {
         Magnesis_UI.SetActive(false);
 
         CurrentIU.SetActive(true);
+    }
+    public void ThrowBombObj()
+    {
+        if(playerCon.Ability.Equals(PlayerController.AbilityState.SquareBomb))
+            Squarebomb.ThrowBomb();
+        else if (playerCon.Ability.Equals(PlayerController.AbilityState.SphereBomb))
+            Spherebomb.ThrowBomb();
+
     }
 }

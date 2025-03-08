@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour, IPlayerController
 {
     private CharacterController controller;
+    private PlayerAbilityManager playerAbilityMng;
     public Animator PlayerAnim;
 
     public Transform GroundCheckTransform;
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private Vector3 playerVelocity = new Vector3();
     private bool isGrounded;
     private bool _isJumping;
+
+    private bool IsMagnesis;
+    private bool IsBomb;
     [Range(1, 10)]
     public float moveSpeed;
 
@@ -24,16 +28,27 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     PlayerInput playerInput;
 
+    [Header("Skeleton Transform")]
+    public Transform PalmBone_R;
+
     #region Interface
     public Vector3 InputVector => playerInput.InputDir;
     public Vector2 MouseInput => playerInput.MouseInput;
     public bool Jump => playerInput.Jump;
     public float MagnesisDistanceInput => playerInput.MagnesisDistanceInput;
     public bool isJumping => _isJumping;
-    public bool isMagnesis => playerInput.isMagnesis;
+    public bool magnesisActive => IsMagnesis;
+    public bool BombActive => IsBomb;
     #endregion
-    enum AbilityState {None, Magnesis}
-    AbilityState Ability = AbilityState.None;
+    public enum AbilityState {
+        None,
+        Magnesis, 
+        SquareBomb,
+        SphereBomb,
+        Stasis,
+        Cyonis
+    }
+    public AbilityState Ability = AbilityState.None;
     public enum LocamotionState { Normal,zTarget,RuneActive}
     public LocamotionState _locmotionState;
 
@@ -42,7 +57,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
     public CinemachineOrbitalFollow CineOF;
     private void Start()
     {
+        EnableCursor(false);
         controller = GetComponent<CharacterController>();
+        playerAbilityMng = GetComponent<PlayerAbilityManager>();
         SetAbility(0);
     }
     private void Update()
@@ -109,19 +126,37 @@ public class PlayerController : MonoBehaviour, IPlayerController
             InputDir = new Vector3(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")).normalized,
             MouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")),
             Jump = Input.GetButtonDown("Jump"),
-            isMagnesis = Ability.Equals(AbilityState.Magnesis),
             Tab = Input.GetKeyDown(KeyCode.Tab),
             MagnesisDistanceInput = Input.GetAxis("MagnesisDistance")
+
         };
-        if (Input.GetKeyDown(KeyCode.Tab))
+        IsMagnesis = Ability.Equals(AbilityState.Magnesis);
+        IsBomb = Ability.Equals(AbilityState.SquareBomb) || Ability.Equals(AbilityState.SphereBomb);
+        if (Input.GetKeyDown(KeyCode.Tab) && Ability == AbilityState.None)
         {
             //EnableCursor(AbilityUI.activeSelf ? false : true);
             AbilityUI.SetActive(!AbilityUI.activeSelf);
+            
+        }
+        if (true)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                SetAbility(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                SetAbility(2);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                SetAbility(3);
+            }
         }
 
         if (Jump && !Ability.Equals(AbilityState.None))
         {
-            SetAbility(0);
+            CancelAbility((int)Ability);
         }
     }
     private void Gravity()
@@ -129,11 +164,11 @@ public class PlayerController : MonoBehaviour, IPlayerController
         playerVelocity.y += -9.85f * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
-    //private void EnableCursor(bool value)
-    //{
-    //    Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
-    //    Cursor.visible = value;
-    //}
+    private void EnableCursor(bool value)
+    {
+        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = value;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
@@ -143,7 +178,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
         Vector3 CenterPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f));
         Gizmos.DrawRay(Camera.main.transform.position,Camera.main.transform.forward * 19);
     }
-
+    private void CancelAbility(int index)
+    {
+        playerAbilityMng.CancelAbility(index);
+    }
     public void SetAbility(int ability)
     {
         AbilityUI.SetActive(false);
@@ -165,7 +203,6 @@ public struct PlayerInput
     public bool Jump;
     public bool Tab;
     public float MagnesisDistanceInput;
-    public bool isMagnesis;
 }
 public interface IPlayerController
 {
@@ -174,6 +211,6 @@ public interface IPlayerController
     public bool Jump { get; }
     public float MagnesisDistanceInput { get; }
     public bool isJumping { get; }
-    public bool isMagnesis { get; }
-    
+    public bool magnesisActive { get; }
+    public bool BombActive { get; }
 }

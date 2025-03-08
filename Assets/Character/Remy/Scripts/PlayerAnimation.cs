@@ -14,6 +14,12 @@ public class PlayerAnimation : MonoBehaviour
     {
         _anim.SetFloat("UnitVelocity", _playerAction.InputVector.magnitude);
         _anim.SetBool("Jump", _playerAction.isJumping);
-        _anim.SetBool("Magnesis", _playerAction.isMagnesis);
+        _anim.SetBool("Magnesis", _playerAction.magnesisActive);
+        _anim.SetBool("Bomb", _playerAction.BombActive);
+    }
+
+    public void ThrowBombAnim()
+    {
+        _anim.SetTrigger("ThrowBomb");
     }
 }
