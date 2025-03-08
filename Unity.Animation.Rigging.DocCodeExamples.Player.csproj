@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F3382C9C-8F4F-6355-9C4F-412CA6BE392B}</ProjectGuid>
+    <ProjectGuid>{0A944682-4F2C-E3CA-6E84-8F3A991E6243}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Animation.Rigging.DocCodeExamples</AssemblyName>
@@ -847,11 +847,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Animation.Rigging.Player.csproj">
-      <Project>{54DC34CC-0170-23AA-8ACC-4091C809A26C}</Project>
+      <Project>{0E457B5C-5B5A-F61A-36FA-64F7B36603D1}</Project>
       <Name>Unity.Animation.Rigging.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{BF4AAB1F-E397-7BEC-36F1-D68B9AE8E77C}</Project>
+      <Project>{A18A8323-6A41-7750-F09C-515FAAC0ECF5}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

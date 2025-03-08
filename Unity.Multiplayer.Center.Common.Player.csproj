@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C8421883-49B8-2B37-3F01-514CEB82C415}</ProjectGuid>
+    <ProjectGuid>{D16A33EF-1305-49A5-B134-0EBF79E33F98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Multiplayer.Center.Common</AssemblyName>
@@ -863,7 +863,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{BF4AAB1F-E397-7BEC-36F1-D68B9AE8E77C}</Project>
+      <Project>{A18A8323-6A41-7750-F09C-515FAAC0ECF5}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

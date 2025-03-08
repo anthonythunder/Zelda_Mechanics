@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{918ECDCE-3EEF-B8A5-1335-68C5F26FDDE6}</ProjectGuid>
+    <ProjectGuid>{3EDF2466-B8FE-0B81-D93F-016B08F29ADA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Cinemachine.Editor</AssemblyName>
@@ -1241,55 +1241,55 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{9E813868-F91E-D493-E390-5B256E26AF3F}</Project>
+      <Project>{0762193F-1D83-2103-7339-6FEE9DB43BCA}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{BACD1DDB-E295-6B00-EC3F-563DC73FDD8A}</Project>
+      <Project>{B1D5F47C-8438-FA0D-02CA-E41B9E0C0099}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{71B87B12-1B6C-56A4-1CA3-87322E414CD9}</Project>
+      <Project>{9674840F-E1E0-4B8D-8555-65DDF1492660}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{7A393582-7985-3992-D8FD-6962659AABFE}</Project>
+      <Project>{1E26A95F-8C14-002E-0C7D-B03A24E48D98}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Splines.csproj">
-      <Project>{2C8F7FF4-4818-499D-DD48-0EB02F7AE436}</Project>
+      <Project>{7BF7D726-4D13-FA0F-BD5E-19ABC3BB6E0F}</Project>
       <Name>Unity.Splines</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Splines.Editor.csproj">
-      <Project>{FEF9B8B8-C50B-AB0B-53D9-CD9B864D1EC0}</Project>
+      <Project>{B3B8B2C1-358C-ACDC-1918-D10CCF9FDFBC}</Project>
       <Name>Unity.Splines.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{87B219AA-B4C7-7DF3-E122-5A7679B9AFCC}</Project>
+      <Project>{F6AE1E44-790E-15FF-2CE9-70F4830E8CDA}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{E825DFBA-086D-2877-0821-17FA557BB469}</Project>
+      <Project>{2BBFD7AD-B251-3B49-55DD-82BEF57C2E1B}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Cinemachine.csproj">
-      <Project>{7FEA438F-8958-7960-0449-ACA776EFA017}</Project>
+      <Project>{6936ADA5-380E-0B71-0878-9F2928765672}</Project>
       <Name>Unity.Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{370F8401-3782-5408-BACC-24E9762FEBDC}</Project>
+      <Project>{740A3BF3-91B2-F9DC-1578-B8348277281D}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{27C773BA-561E-32D7-0713-15874ED036F9}</Project>
+      <Project>{39FCECAE-7DA6-653D-E912-DA28B9F180AE}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{0CE7EC29-3048-0952-C9D6-203D8F9CBA76}</Project>
+      <Project>{C84B0F82-D4E9-E5D6-D950-1B947F6025EB}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{007B61ED-3D4F-82BB-8D2A-1E96DBAE1FBA}</Project>
+      <Project>{208D97AB-CE68-79E2-2191-695137FFE4D4}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>UnityEngine.Splines</RootNamespace>
-    <ProjectGuid>{B4B47C61-AEAD-9147-4BCD-8CB92DC2D168}</ProjectGuid>
+    <ProjectGuid>{EEF30AA3-0C01-4DE7-E2DB-1F4F35D4497C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Splines</AssemblyName>
@@ -900,15 +900,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{6B061C09-DF66-97EA-02E1-15A0C1AE5870}</Project>
+      <Project>{9D94F1D6-99D6-6638-5A7A-A8840FE2D36A}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
-      <Project>{376A7B96-9F1A-6C19-4CA7-85A6F4D75B6E}</Project>
+      <Project>{EE49AD3C-4F3D-544F-A2F1-5B7D8707D97E}</Project>
       <Name>Unity.Burst.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{BF4AAB1F-E397-7BEC-36F1-D68B9AE8E77C}</Project>
+      <Project>{A18A8323-6A41-7750-F09C-515FAAC0ECF5}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
