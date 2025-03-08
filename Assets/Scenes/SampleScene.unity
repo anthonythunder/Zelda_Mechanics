@@ -2503,13 +2503,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b4bec4f6f70cb343b69eab60bf5da00, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 1977769399}
+      addedObject: {fileID: 1977769398}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b4bec4f6f70cb343b69eab60bf5da00, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 1977769400}
+      addedObject: {fileID: 1977769399}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b4bec4f6f70cb343b69eab60bf5da00, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1977769398}
+      insertIndex: 3
+      addedObject: {fileID: 1977769400}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b4bec4f6f70cb343b69eab60bf5da00, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1977769401}
@@ -2572,7 +2572,6 @@ MonoBehaviour:
   moveSpeed: 4.5
   AbilityUI: {fileID: 523137186}
   PalmBone_R: {fileID: 958575065}
-  SquareBomb: {fileID: 330482785157464674, guid: cbde7691364d61c4b87248c6c01fb79a, type: 3}
   Ability: 0
   _locmotionState: 0
   CineOF: {fileID: 478656938}
@@ -2603,7 +2602,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnesis: {fileID: 11400000, guid: 24dacc4e61b0ffa45a29bcf09395b1a7, type: 2}
   Squarebomb: {fileID: 11400000, guid: 63ad34d37898c41478a395b6384c4562, type: 2}
-  HoldingBomb: {fileID: 0}
+  Spherebomb: {fileID: 11400000, guid: 3a61ba9f96e6a99439723e53360a50b4, type: 2}
+  SquareBomb_prefab: {fileID: 330482785157464674, guid: cbde7691364d61c4b87248c6c01fb79a, type: 3}
+  SphereBomb_prefab: {fileID: 330482785157464674, guid: b491dbb5c2ed91c40b7a36a5cc86ff62, type: 3}
   Magnesis_UI: {fileID: 1999905387}
 --- !u!114 &1977769402
 MonoBehaviour:

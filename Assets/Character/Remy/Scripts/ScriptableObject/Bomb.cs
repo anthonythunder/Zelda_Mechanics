@@ -9,9 +9,9 @@ public class Bomb : AbilityPropertise
     private PlayerController playerCon;
     private PlayerAbilityManager playerAbilityManager;
     private GameObject ActiveBomb;
-    public override void Activate(Transform player)
+    public override void Activate(Transform player,GameObject Bomb)
     {
-        base.Activate(player);
+        base.Activate(player,Bomb);
         if(playerAnimation == null || playerCon == null)
         {
             playerCon = player.GetComponent<PlayerController>();
@@ -19,12 +19,14 @@ public class Bomb : AbilityPropertise
             playerAbilityManager = player.GetComponent<PlayerAbilityManager>();
         }
         //instantiate Bomb
-
-        if(ActiveBomb == null)
+        if (ActiveBomb == null)
         {
+            hasThrown = false;
+            canDetonate = false;
+
             if (Input.GetKeyDown(KeyCode.G))
             {
-                ActiveBomb = Instantiate(playerCon.SquareBomb, playerCon.PalmBone_R.position, Quaternion.identity);
+                ActiveBomb = Instantiate(Bomb, playerCon.PalmBone_R.position, Quaternion.identity);
                 ActiveBomb.transform.localScale = Vector3.one * 0.25f;
                 ActiveBomb.transform.SetParent(playerCon.PalmBone_R);
                 isActive = true;
@@ -45,7 +47,6 @@ public class Bomb : AbilityPropertise
                 hasThrown = false;
             }
         }
-
     }
     public override void CancelAbility(Transform player)
     {

@@ -7,6 +7,11 @@ public class PlayerAbilityManager : MonoBehaviour
     private PlayerAnimation _playerAnim;
     [SerializeField] private Magnesis magnesis;
     [SerializeField] private Bomb Squarebomb;
+    [SerializeField] private Bomb Spherebomb;
+
+    [Header("Prefabs")]
+    [SerializeField] private GameObject SquareBomb_prefab;
+    [SerializeField] private GameObject SphereBomb_prefab;
 
     [Header("UI")]
     public GameObject Magnesis_UI;
@@ -26,17 +31,18 @@ public class PlayerAbilityManager : MonoBehaviour
         switch (playerCon.Ability)
         {
             case PlayerController.AbilityState.None:
-                CancelAbility();
+                CancelAllAbility();
                 break;
             case PlayerController.AbilityState.Magnesis:
-                magnesis.Activate(transform);
+                magnesis.Activate(transform,null);
                 HandleAbilityUI(Magnesis_UI);
                 break;
             case PlayerController.AbilityState.SquareBomb:
-                Squarebomb.Activate(transform);
+                Squarebomb.Activate(transform,SquareBomb_prefab);
 
                 break;
             case PlayerController.AbilityState.SphereBomb:
+                Spherebomb.Activate(transform, SphereBomb_prefab);
                 break;
             case PlayerController.AbilityState.Stasis:
                 break;
@@ -44,10 +50,26 @@ public class PlayerAbilityManager : MonoBehaviour
                 break;
         }
     }
-    public void CancelAbility()
+    public void CancelAbility(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                magnesis.CancelAbility(transform);
+                break;
+            case 1:
+                Squarebomb.CancelAbility(transform);
+                break;
+            case 2:
+                Spherebomb.CancelAbility(transform);
+                break;
+        }
+    }
+    public void CancelAllAbility()
     {
         magnesis.CancelAbility(transform);
         Squarebomb.CancelAbility(transform);
+        Spherebomb.CancelAbility(transform);
     }
     private void HandleAbilityUI(GameObject CurrentIU)
     {
@@ -57,6 +79,10 @@ public class PlayerAbilityManager : MonoBehaviour
     }
     public void ThrowBombObj()
     {
-        Squarebomb.ThrowBomb();
+        if(playerCon.Ability.Equals(PlayerController.AbilityState.SquareBomb))
+            Squarebomb.ThrowBomb();
+        else if (playerCon.Ability.Equals(PlayerController.AbilityState.SphereBomb))
+            Spherebomb.ThrowBomb();
+
     }
 }

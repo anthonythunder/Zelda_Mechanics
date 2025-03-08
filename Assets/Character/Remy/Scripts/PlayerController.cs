@@ -31,9 +31,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
     [Header("Skeleton Transform")]
     public Transform PalmBone_R;
 
-    [Header("weapons/Equipments")]
-    public GameObject SquareBomb;
-
     #region Interface
     public Vector3 InputVector => playerInput.InputDir;
     public Vector2 MouseInput => playerInput.MouseInput;
@@ -134,28 +131,32 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
         };
         IsMagnesis = Ability.Equals(AbilityState.Magnesis);
-        IsBomb = Ability.Equals(AbilityState.SquareBomb);
+        IsBomb = Ability.Equals(AbilityState.SquareBomb) || Ability.Equals(AbilityState.SphereBomb);
         if (Input.GetKeyDown(KeyCode.Tab) && Ability == AbilityState.None)
         {
             //EnableCursor(AbilityUI.activeSelf ? false : true);
             AbilityUI.SetActive(!AbilityUI.activeSelf);
             
         }
-        if (AbilityUI.activeSelf)
+        if (true)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SetAbility(1);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 SetAbility(2);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                SetAbility(3);
             }
         }
 
         if (Jump && !Ability.Equals(AbilityState.None))
         {
-            SetAbility(0);
+            CancelAbility((int)Ability);
         }
     }
     private void Gravity()
@@ -177,7 +178,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
         Vector3 CenterPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f));
         Gizmos.DrawRay(Camera.main.transform.position,Camera.main.transform.forward * 19);
     }
-
+    private void CancelAbility(int index)
+    {
+        playerAbilityMng.CancelAbility(index);
+    }
     public void SetAbility(int ability)
     {
         AbilityUI.SetActive(false);

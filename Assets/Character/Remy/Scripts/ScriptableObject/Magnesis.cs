@@ -17,10 +17,10 @@ public class Magnesis : AbilityPropertise
     private int MaxDistance = 12;
     private float DistanceOffsetSpped = 10;
 
-    public override void Activate(Transform player)
+    public override void Activate(Transform player, GameObject Magnet)
     {
         
-        base.Activate(player);
+        base.Activate(player, Magnet);
 
         if (playerAction == null) {playerAction = player.GetComponent<IPlayerController>(); }
         if (playerController == null) { playerController = player.GetComponent<PlayerController>(); }

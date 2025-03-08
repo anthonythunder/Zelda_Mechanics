@@ -7,7 +7,7 @@ public class AbilityPropertise : ScriptableObject
     public string Name;
     public string Description;
     public bool isActive = false;
-    public virtual void Activate(Transform player)
+    public virtual void Activate(Transform player,GameObject Obj)
     {
         Debug.Log("Activate : " + Name);
     }

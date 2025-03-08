@@ -5,8 +5,8 @@ public class ObjecHealth : MonoBehaviour
     private Rigidbody rb;
 
     public float explosionForce = 100;
-    public float explosionUpwardForce = 5;
-    private float explosionRadius = 5;
+    public float explosionUpwardForce = 1;
+    private float explosionRadius = 7;
 
     void Start()
     {
