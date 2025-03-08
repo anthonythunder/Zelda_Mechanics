@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7417275284696667461}
   m_Layer: 0
   m_Name: Cube Bomb
-  m_TagString: Untagged
+  m_TagString: Explosive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5670e07c72b8b764e9872e0a7e4786c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 200
-  explosionRadius: 100
-  explosionUpwardForce: 100
+  explosionRadius: 5
+  DamageableMask:
+    serializedVersion: 2
+    m_Bits: 192

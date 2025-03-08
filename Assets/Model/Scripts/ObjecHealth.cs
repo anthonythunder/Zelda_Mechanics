@@ -1,32 +1,21 @@
 using UnityEngine;
 
-public class ObjecHealth : MonoBehaviour,IExplosion
+public class ObjecHealth : MonoBehaviour
 {
     private Rigidbody rb;
 
-    public float explosionForce;
-    public float explosionUpwardForce;
-    public float explosionRadius;
-    public Vector3 ExplosionOrigin
-    {
-        get
-        {
-            return transform.position;
-        }
-        set
-        {
-            return;
-        }
+    public float explosionForce = 100;
+    public float explosionUpwardForce = 5;
+    private float explosionRadius = 5;
 
-    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
     #region Explosion Interface
-    public void Explode()
+    public void Explode(Transform bomb)
     {
-        rb.AddExplosionForce(explosionForce, ExplosionOrigin, 10, explosionUpwardForce);
+        rb.AddExplosionForce(explosionForce, bomb.position, explosionRadius, explosionUpwardForce);
     }
     #endregion
 }

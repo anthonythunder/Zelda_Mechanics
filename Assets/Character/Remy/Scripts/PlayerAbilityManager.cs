@@ -8,7 +8,6 @@ public class PlayerAbilityManager : MonoBehaviour
     [SerializeField] private Magnesis magnesis;
     [SerializeField] private Bomb Squarebomb;
 
-    public Rigidbody HoldingBomb;
     [Header("UI")]
     public GameObject Magnesis_UI;
 
@@ -36,10 +35,6 @@ public class PlayerAbilityManager : MonoBehaviour
             case PlayerController.AbilityState.SquareBomb:
                 Squarebomb.Activate(transform);
 
-                if (Squarebomb.canDetonate && Input.GetKeyDown(KeyCode.G))
-                {
-                    HoldingBomb.GetComponent<BombRune>().Detonate();
-                }
                 break;
             case PlayerController.AbilityState.SphereBomb:
                 break;
@@ -62,17 +57,6 @@ public class PlayerAbilityManager : MonoBehaviour
     }
     public void ThrowBombObj()
     {
-        if(HoldingBomb!= null)
-        {
-            HoldingBomb.transform.parent = null;
-            HoldingBomb.isKinematic = false;
-            HoldingBomb.transform.localScale = Vector3.one;
-            HoldingBomb.AddForce(transform.forward * 2,ForceMode.Force);
-        }
+        Squarebomb.ThrowBomb();
     }
-}
-public interface IExplosion
-{
-    public Vector3 ExplosionOrigin { get; set; }
-    public void Explode();
 }
