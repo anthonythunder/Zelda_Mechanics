@@ -135,8 +135,8 @@
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Events\DeviceConfigurationEvent.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\InputUpdateType.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Controls\DpadControl.cs" />
-    <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Editor\AssetEditor\InputActionTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Plugins\XInput\XboxGamepadMacOS.cs" />
+    <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Editor\AssetEditor\InputActionTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Editor\ProjectWideActions\ProjectWideActionsAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Devices\Commands\InputDeviceCommand.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem\InputSystem\Utilities\Observables\TakeNObservable.cs" />

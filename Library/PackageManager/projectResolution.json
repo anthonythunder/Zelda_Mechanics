@@ -16,6 +16,14 @@
       "version": "2.0.5",
       "source": "registry"
     },
+    "com.unity.animation.rigging@1.3.0": {
+      "name": "com.unity.animation.rigging",
+      "resolvedPath": "G:\\Projects\\Unity_projects\\ZeldaMechanics\\Library\\PackageCache\\com.unity.animation.rigging",
+      "fingerprint": "68167b505d2b550a35f5d5b6daef6193de3c7460",
+      "editorCompatibility": "2022.2.0a9",
+      "version": "1.3.0",
+      "source": "registry"
+    },
     "com.unity.cinemachine@3.1.3": {
       "name": "com.unity.cinemachine",
       "resolvedPath": "G:\\Projects\\Unity_projects\\ZeldaMechanics\\Library\\PackageCache\\com.unity.cinemachine",
@@ -78,14 +86,6 @@
       "fingerprint": "0a21eb82d95cd331643a1e0ce4e8e9a5f18954c8",
       "editorCompatibility": "2019.4.0a10",
       "version": "1.4.5",
-      "source": "registry"
-    },
-    "com.unity.timeline@1.8.7": {
-      "name": "com.unity.timeline",
-      "resolvedPath": "G:\\Projects\\Unity_projects\\ZeldaMechanics\\Library\\PackageCache\\com.unity.timeline",
-      "fingerprint": "c58b4ee65782ad38338e29f7ee67787cb6998f04",
-      "editorCompatibility": "2019.3.0a1",
-      "version": "1.8.7",
       "source": "registry"
     },
     "com.unity.ugui@2.0.0": {
@@ -348,20 +348,20 @@
       "version": "2.7.2",
       "source": "registry"
     },
-    "com.unity.searcher@4.9.2": {
-      "name": "com.unity.searcher",
-      "resolvedPath": "G:\\Projects\\Unity_projects\\ZeldaMechanics\\Library\\PackageCache\\com.unity.searcher",
-      "fingerprint": "90d011a70418fd5b0f4b8e86df39444d2af228dd",
-      "editorCompatibility": "2019.1.0a1",
-      "version": "4.9.2",
-      "source": "registry"
-    },
     "com.unity.burst@1.8.18": {
       "name": "com.unity.burst",
       "resolvedPath": "G:\\Projects\\Unity_projects\\ZeldaMechanics\\Library\\PackageCache\\com.unity.burst",
       "fingerprint": "616862665d8c8ffe643d505aebb5de2ee73b0ab0",
       "editorCompatibility": "2020.3.0a1",
       "version": "1.8.18",
+      "source": "registry"
+    },
+    "com.unity.searcher@4.9.2": {
+      "name": "com.unity.searcher",
+      "resolvedPath": "G:\\Projects\\Unity_projects\\ZeldaMechanics\\Library\\PackageCache\\com.unity.searcher",
+      "fingerprint": "90d011a70418fd5b0f4b8e86df39444d2af228dd",
+      "editorCompatibility": "2019.1.0a1",
+      "version": "4.9.2",
       "source": "registry"
     },
     "com.unity.mathematics@1.3.2": {

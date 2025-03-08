@@ -61,12 +61,15 @@
     <Analyzer Include="C:\Program Files\UnityEditor\6000.0.32f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\Bomb.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\Magnesis.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\AbilityPropertise.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerAnimation.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Model\Scripts\ObjecHealth.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerAbilityManager.cs" />
+    <Compile Include="Assets\Model\Ability\Bomb\Scripts\BombRune.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -904,10 +907,6 @@
       <Project>{FE1E5B9F-F6D9-B536-9C3E-57AFA54F0DBF}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Shared.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{9A025F00-B1C5-329F-7BEC-84D7672DDA4C}</Project>
-      <Name>Unity.Timeline.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{BF4AAB1F-E397-7BEC-36F1-D68B9AE8E77C}</Project>
       <Name>UnityEngine.UI.Player</Name>
@@ -939,6 +938,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.Player.csproj">
       <Project>{FAB4BBDD-6D7B-9661-CD8A-FD129DB0249B}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Animation.Rigging.Player.csproj">
+      <Project>{54DC34CC-0170-23AA-8ACC-4091C809A26C}</Project>
+      <Name>Unity.Animation.Rigging.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
       <Project>{81417C3E-B8D6-F46B-BB44-5A52B2F6F5C6}</Project>

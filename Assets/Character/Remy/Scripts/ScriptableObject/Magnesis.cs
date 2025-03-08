@@ -1,4 +1,3 @@
-using Unity.Cinemachine;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Magnesis", menuName = "Scriptable Objects/Magnesis")]
@@ -11,12 +10,13 @@ public class Magnesis : AbilityPropertise
     private Vector3 rayEnd;
      private float rayDistance = 20;
 
-    private Transform CurrentSelectedObj;
+    private Transform    CurrentSelectedObj;
     private Vector3 ActiveObjPos;
     private Vector3 offset;
     private int MinDistance = 1;
     private int MaxDistance = 12;
     private float DistanceOffsetSpped = 10;
+
     public override void Activate(Transform player)
     {
         
@@ -31,7 +31,7 @@ public class Magnesis : AbilityPropertise
             CurrentSelectedObj.position = (player.position + offset);
             ActiveObjPos = CurrentSelectedObj.position + Vector3.up * playerAction.MouseInput.y;
             CurrentSelectedObj.position = Vector3.Lerp(CurrentSelectedObj.position, ActiveObjPos,Time.deltaTime * 20);
-            CurrentSelectedObj.RotateAround(player.position, Vector3.up, playerAction.MouseInput.x * Time.deltaTime * 100);
+            CurrentSelectedObj.transform.RotateAround(player.position, Vector3.up, playerAction.MouseInput.x * Time.deltaTime * 100);
             if (GetXZDistance(CurrentSelectedObj.position, player.position) > MinDistance && GetXZDistance(CurrentSelectedObj.position, player.position) < MaxDistance)
             {
                 CurrentSelectedObj.position += playerController.transform.forward * playerAction.MagnesisDistanceInput * DistanceOffsetSpped * Time.deltaTime;
@@ -79,6 +79,7 @@ public class Magnesis : AbilityPropertise
             CurrentSelectedObj = null;
         }
         playerController.ReCenterCamera(false);
+
         isActive = false;
     }
     private float GetXZDistance(Vector3 a,Vector3 b)
@@ -86,4 +87,5 @@ public class Magnesis : AbilityPropertise
         float dist = Vector2.Distance(new Vector2 (a.x,a.z), new Vector2 (b.x,b.z));
         return dist;
     }
+
 }
