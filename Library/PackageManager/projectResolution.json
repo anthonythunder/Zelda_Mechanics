@@ -96,6 +96,14 @@
       "version": "2.0.0",
       "source": "builtin"
     },
+    "com.unity.visualeffectgraph@17.0.3": {
+      "name": "com.unity.visualeffectgraph",
+      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.visualeffectgraph",
+      "fingerprint": "763fe45bd26f3308425f7de02344b649347bc0b2",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "17.0.3",
+      "source": "builtin"
+    },
     "com.unity.visualscripting@1.9.5": {
       "name": "com.unity.visualscripting",
       "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.visualscripting",
@@ -308,13 +316,13 @@
       "version": "1.0.0",
       "source": "builtin"
     },
-    "com.unity.ext.nunit@2.0.5": {
-      "name": "com.unity.ext.nunit",
-      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.ext.nunit",
-      "fingerprint": "60ef35ffd3cd5e2f5c8887a4a4ca6148854cd092",
-      "editorCompatibility": "2019.4.0a1",
-      "version": "2.0.5",
-      "source": "registry"
+    "com.unity.shadergraph@17.0.3": {
+      "name": "com.unity.shadergraph",
+      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.shadergraph",
+      "fingerprint": "9111176982208cf007caa931c3cf2716ceec4632",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "17.0.3",
+      "source": "builtin"
     },
     "com.unity.render-pipelines.core@17.0.3": {
       "name": "com.unity.render-pipelines.core",
@@ -324,13 +332,13 @@
       "version": "17.0.3",
       "source": "builtin"
     },
-    "com.unity.shadergraph@17.0.3": {
-      "name": "com.unity.shadergraph",
-      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.shadergraph",
-      "fingerprint": "9111176982208cf007caa931c3cf2716ceec4632",
-      "editorCompatibility": "6000.0.0a1",
-      "version": "17.0.3",
-      "source": "builtin"
+    "com.unity.ext.nunit@2.0.5": {
+      "name": "com.unity.ext.nunit",
+      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.ext.nunit",
+      "fingerprint": "60ef35ffd3cd5e2f5c8887a4a4ca6148854cd092",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.0.5",
+      "source": "registry"
     },
     "com.unity.render-pipelines.universal-config@17.0.3": {
       "name": "com.unity.render-pipelines.universal-config",
@@ -356,14 +364,6 @@
       "version": "1.8.18",
       "source": "registry"
     },
-    "com.unity.searcher@4.9.2": {
-      "name": "com.unity.searcher",
-      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.searcher",
-      "fingerprint": "90d011a70418fd5b0f4b8e86df39444d2af228dd",
-      "editorCompatibility": "2019.1.0a1",
-      "version": "4.9.2",
-      "source": "registry"
-    },
     "com.unity.mathematics@1.3.2": {
       "name": "com.unity.mathematics",
       "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.mathematics",
@@ -387,6 +387,14 @@
       "editorCompatibility": "2023.3.0b1",
       "version": "1.0.1",
       "source": "builtin"
+    },
+    "com.unity.searcher@4.9.2": {
+      "name": "com.unity.searcher",
+      "resolvedPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Library\\PackageCache\\com.unity.searcher",
+      "fingerprint": "90d011a70418fd5b0f4b8e86df39444d2af228dd",
+      "editorCompatibility": "2019.1.0a1",
+      "version": "4.9.2",
+      "source": "registry"
     },
     "com.unity.settings-manager@2.0.1": {
       "name": "com.unity.settings-manager",

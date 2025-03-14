@@ -134,8 +134,8 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\Utility\InspectorUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\PropertyDrawers\CameraTargetPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\SaveDuringPlay\SaveDuringPlay.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\Editors\CinemachineMixingCameraEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\Editors\CinemachineThirdPersonFollowEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\Editors\CinemachineMixingCameraEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\Windows\CinemachineSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\Editors\CinemachineExtensionEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine\Editor\PropertyDrawers\GroupTargetPropertyDrawer.cs" />

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7464789665335657515}
   - component: {fileID: 5804913621581518529}
   - component: {fileID: 7417275284696667461}
+  - component: {fileID: 594770775249451068}
   m_Layer: 0
   m_Name: Sphere Bomb
   m_TagString: Explosive
@@ -149,7 +150,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5670e07c72b8b764e9872e0a7e4786c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlastEffect: {fileID: 8405122846874900622, guid: 7549e3e9836a73c4d88b9a9e243c1b29, type: 3}
+  cinemachineImpulse: {fileID: 594770775249451068}
   explosionRadius: 5
   DamageableMask:
     serializedVersion: 2
     m_Bits: 192
+--- !u!114 &594770775249451068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330482785157464674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 2
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.2
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 0, y: -1, z: 0}

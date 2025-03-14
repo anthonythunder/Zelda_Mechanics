@@ -52,7 +52,7 @@ public class Bomb : AbilityPropertise
     {
         base.CancelAbility(player);
         if (!isActive) return;
-        if (ActiveBomb != null)
+        if (ActiveBomb != null && !hasThrown)
         {
             Destroy(ActiveBomb);
         }

@@ -70,9 +70,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
         Locomotion();
 
-
-        
-
         if (!isGrounded && !_isJumping)
         {
             Gravity();
@@ -93,10 +90,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
                 }
 
 
-                if (playerInput.Jump && isGrounded)
-                {
-                    _isJumping = true;
-                }
+               
                 if (PlayerAnim.GetCurrentAnimatorStateInfo(0).IsName("Jump") && PlayerAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.96f && isGrounded)
                 {
                     _isJumping = false;
@@ -108,9 +102,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
                 break;
             case LocamotionState.RuneActive:
 
-                //playerFwdDir = -(Camera.main.transform.position - transform.position).normalized;
-                //Vector3 dir = Quaternion.LookRotation(playerFwdDir).eulerAngles;
-                //transform.eulerAngles = new Vector3(0, dir.y, 0);
                 if (playerInput.InputDir.magnitude > 0.1f)
                 {
                     controller.Move(transform.forward * playerInput.InputDir.z * moveSpeed * Time.deltaTime + transform.right * playerInput.InputDir.x * moveSpeed * Time.deltaTime);
@@ -138,25 +129,28 @@ public class PlayerController : MonoBehaviour, IPlayerController
             AbilityUI.SetActive(!AbilityUI.activeSelf);
             
         }
-        if (true)
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                SetAbility(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                SetAbility(2);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                SetAbility(3);
-            }
+            SetAbility(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetAbility(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetAbility(3);
         }
 
-        if (Jump && !Ability.Equals(AbilityState.None))
+        if (playerInput.Jump && !Ability.Equals(AbilityState.None))
         {
             CancelAbility((int)Ability);
+            Ability = AbilityState.None;
+        }
+        else if(playerInput.Jump && Ability.Equals(AbilityState.None) && isGrounded)
+        {
+            _isJumping = true;
         }
     }
     private void Gravity()

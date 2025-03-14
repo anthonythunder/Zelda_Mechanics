@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\playerabilitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\playerabilitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\model\\ability\\bomb\\scripts\\bombrune.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\ability\\bomb\\scripts\\bombrune.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|g:\\projects\\unity_projects\\zelda_mechanics\\assets\\character\\remy\\scripts\\scriptableobject\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\scriptableobject\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\model\\ability\\bomb\\scripts\\bombrune.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\ability\\bomb\\scripts\\bombrune.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\playerabilitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\playerabilitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\scriptableobject\\magnesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\scriptableobject\\magnesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\model\\scripts\\objechealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\scripts\\objechealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|g:\\projects\\unity_projects\\zelda_mechanics\\assets\\character\\remy\\scripts\\scriptableobject\\abilitypropertise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|G:\\Projects\\Unity_projects\\Zelda_Mechanics\\assets\\character\\remy\\scripts\\scriptableobject\\abilitypropertise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\scriptableobject\\abilitypropertise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|g:\\projects\\unity_projects\\zelda_mechanics\\assets\\character\\remy\\scripts\\scriptableobject\\magnesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\scriptableobject\\magnesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|g:\\projects\\unity_projects\\zelda_mechanics\\assets\\character\\remy\\scripts\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30769A4-AFFE-19B3-B590-10660A66CB15}|Assembly-CSharp.csproj|solutionrelative:assets\\character\\remy\\scripts\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,37 +42,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "PlayerAnimation.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\PlayerAnimation.cs",
               "RelativeDocumentMoniker": "Assets\\Character\\Remy\\Scripts\\PlayerAnimation.cs",
               "ToolTip": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\PlayerAnimation.cs",
               "RelativeToolTip": "Assets\\Character\\Remy\\Scripts\\PlayerAnimation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T15:06:29.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T15:06:29.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Magnesis.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Magnesis.cs",
               "RelativeDocumentMoniker": "Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Magnesis.cs",
               "ToolTip": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Magnesis.cs",
               "RelativeToolTip": "Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Magnesis.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowEUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T14:56:15.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T14:56:15.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AbilityPropertise.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\ScriptableObject\\AbilityPropertise.cs",
               "RelativeDocumentMoniker": "Assets\\Character\\Remy\\Scripts\\ScriptableObject\\AbilityPropertise.cs",
@@ -80,12 +78,11 @@
               "RelativeToolTip": "Assets\\Character\\Remy\\Scripts\\ScriptableObject\\AbilityPropertise.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T14:55:06.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T14:55:06.609Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ObjecHealth.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Model\\Scripts\\ObjecHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Scripts\\ObjecHealth.cs",
@@ -93,57 +90,55 @@
               "RelativeToolTip": "Assets\\Model\\Scripts\\ObjecHealth.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T08:13:09.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T08:13:09.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "BombRune.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Model\\Ability\\Bomb\\Scripts\\BombRune.cs",
               "RelativeDocumentMoniker": "Assets\\Model\\Ability\\Bomb\\Scripts\\BombRune.cs",
               "ToolTip": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Model\\Ability\\Bomb\\Scripts\\BombRune.cs",
               "RelativeToolTip": "Assets\\Model\\Ability\\Bomb\\Scripts\\BombRune.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T08:02:13.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Bomb.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Bomb.cs",
               "RelativeDocumentMoniker": "Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Bomb.cs",
               "ToolTip": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Bomb.cs",
               "RelativeToolTip": "Assets\\Character\\Remy\\Scripts\\ScriptableObject\\Bomb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T08:01:44.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PlayerAbilityManager.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\PlayerAbilityManager.cs",
               "RelativeDocumentMoniker": "Assets\\Character\\Remy\\Scripts\\PlayerAbilityManager.cs",
               "ToolTip": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\PlayerAbilityManager.cs",
               "RelativeToolTip": "Assets\\Character\\Remy\\Scripts\\PlayerAbilityManager.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAADQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T08:01:38.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T08:01:38.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Character\\Remy\\Scripts\\PlayerController.cs",
               "ToolTip": "G:\\Projects\\Unity_projects\\Zelda_Mechanics\\Assets\\Character\\Remy\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Character\\Remy\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAADwv54AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAI4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T08:01:16.305Z",
               "EditorCaption": ""

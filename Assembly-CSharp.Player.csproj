@@ -939,17 +939,21 @@
       <Project>{177D1901-53A1-D73F-5530-524786CBBB20}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.VisualEffectGraph.Runtime.Player.csproj">
+      <Project>{107502CE-587D-0411-FFF3-65FBC1042C98}</Project>
+      <Name>Unity.VisualEffectGraph.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Animation.Rigging.Player.csproj">
       <Project>{0E457B5C-5B5A-F61A-36FA-64F7B36603D1}</Project>
       <Name>Unity.Animation.Rigging.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{46F95735-330C-9395-E83F-170B1F08B6B8}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Center.Common.Player.csproj">
       <Project>{D16A33EF-1305-49A5-B134-0EBF79E33F98}</Project>
       <Name>Unity.Multiplayer.Center.Common.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{46F95735-330C-9395-E83F-170B1F08B6B8}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{054CAE80-F2C3-728B-B5C9-3FA348D2ABAB}</Project>

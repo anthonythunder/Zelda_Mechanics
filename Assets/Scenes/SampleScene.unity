@@ -887,6 +887,7 @@ GameObject:
   - component: {fileID: 478656937}
   - component: {fileID: 478656936}
   - component: {fileID: 478656935}
+  - component: {fileID: 478656941}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -1118,6 +1119,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478656941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478656934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!4 &513667214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3746190272939815206, guid: 6b4bec4f6f70cb343b69eab60bf5da00, type: 3}
@@ -2391,7 +2415,7 @@ Transform:
   m_GameObject: {fileID: 1929550742}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.8787158, z: -0, w: 0.47734532}
-  m_LocalPosition: {x: -6.228582, y: 2.24, z: 2.662404}
+  m_LocalPosition: {x: -5.269, y: 3.115, z: 2.662404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

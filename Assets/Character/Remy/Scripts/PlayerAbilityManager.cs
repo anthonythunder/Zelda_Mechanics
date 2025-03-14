@@ -31,7 +31,7 @@ public class PlayerAbilityManager : MonoBehaviour
         switch (playerCon.Ability)
         {
             case PlayerController.AbilityState.None:
-                CancelAllAbility();
+
                 break;
             case PlayerController.AbilityState.Magnesis:
                 magnesis.Activate(transform,null);
@@ -54,13 +54,13 @@ public class PlayerAbilityManager : MonoBehaviour
     {
         switch (index)
         {
-            case 0:
+            case 1:
                 magnesis.CancelAbility(transform);
                 break;
-            case 1:
+            case 2:
                 Squarebomb.CancelAbility(transform);
                 break;
-            case 2:
+            case 3:
                 Spherebomb.CancelAbility(transform);
                 break;
         }

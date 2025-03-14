@@ -1237,13 +1237,13 @@
       <Project>{8EE976BC-6A80-5F8B-355E-30CC90A2E87A}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{E9971BBC-0CCD-D55E-1BA7-99FCCE2BAC6D}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.csproj">
       <Project>{70A3870D-7199-D0C7-8591-FBDA9386FA90}</Project>
       <Name>Unity.AI.Navigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{E9971BBC-0CCD-D55E-1BA7-99FCCE2BAC6D}</Project>
+      <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Animation.Rigging.Editor.csproj">
       <Project>{D296E2A3-088F-9D89-6214-D8657DAF54AD}</Project>
@@ -1333,6 +1333,14 @@
       <Project>{1E26A95F-8C14-002E-0C7D-B03A24E48D98}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.VisualEffectGraph.Runtime.csproj">
+      <Project>{6258D9E1-E841-AC65-DFD9-D83848D483DD}</Project>
+      <Name>Unity.VisualEffectGraph.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualEffectGraph.Editor.csproj">
+      <Project>{FBEF2987-15AF-6EEC-C858-3B299874A6A4}</Project>
+      <Name>Unity.VisualEffectGraph.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Collections.Editor.csproj">
       <Project>{86D0509E-DD41-A6AB-6581-5BD446667CF9}</Project>
       <Name>Unity.Collections.Editor</Name>
@@ -1340,10 +1348,6 @@
     <ProjectReference Include="Unity.Animation.Rigging.csproj">
       <Project>{C4A35B80-5D49-AE09-E252-D8CE03DA8AE8}</Project>
       <Name>Unity.Animation.Rigging</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{71D3B762-F386-943D-4FC7-680BB4F44842}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{27866A8D-07F5-6CEF-EB41-0EFF46F8414D}</Project>
@@ -1360,6 +1364,10 @@
     <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
       <Project>{20BD8050-057E-93FD-6222-2F6AA7AE450B}</Project>
       <Name>Unity.AI.Navigation.Updater</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{71D3B762-F386-943D-4FC7-680BB4F44842}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
       <Project>{E017AA42-ADD7-F9F6-CD59-EDEA5781CB24}</Project>
