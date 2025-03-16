@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     public bool isJumping => _isJumping;
     public bool magnesisActive => IsMagnesis;
     public bool BombActive => IsBomb;
+    public bool StasisActive => Ability.Equals(AbilityState.Stasis);
     #endregion
     public enum AbilityState {
         None,
@@ -142,6 +143,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
         {
             SetAbility(3);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SetAbility(4);
+        }
 
         if (playerInput.Jump && !Ability.Equals(AbilityState.None))
         {
@@ -207,4 +212,5 @@ public interface IPlayerController
     public bool isJumping { get; }
     public bool magnesisActive { get; }
     public bool BombActive { get; }
+    public bool StasisActive { get; }
 }

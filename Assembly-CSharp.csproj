@@ -66,6 +66,7 @@
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\AbilityPropertise.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerAnimation.cs" />
+    <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\Stasis.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Model\Scripts\ObjecHealth.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerAbilityManager.cs" />

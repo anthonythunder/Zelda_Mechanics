@@ -437,6 +437,7 @@
 "Assets/Character/Remy/Scripts/ScriptableObject/AbilityPropertise.cs"
 "Assets/Character/Remy/Scripts/ScriptableObject/Bomb.cs"
 "Assets/Character/Remy/Scripts/ScriptableObject/Magnesis.cs"
+"Assets/Character/Remy/Scripts/ScriptableObject/Stasis.cs"
 "Assets/Model/Ability/Bomb/Scripts/BombRune.cs"
 "Assets/Model/Scripts/ObjecHealth.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"

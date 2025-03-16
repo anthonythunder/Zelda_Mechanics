@@ -27,7 +27,7 @@ public class Bomb : AbilityPropertise
             if (Input.GetKeyDown(KeyCode.G))
             {
                 ActiveBomb = Instantiate(Bomb, playerCon.PalmBone_R.position, Quaternion.identity);
-                ActiveBomb.transform.localScale = Vector3.one * 0.25f;
+                //ActiveBomb.transform.localScale = Vector3.one * 0.25f;
                 ActiveBomb.transform.SetParent(playerCon.PalmBone_R);
                 isActive = true;
             }
@@ -62,7 +62,7 @@ public class Bomb : AbilityPropertise
     {
         ActiveBomb.transform.parent = null;
         ActiveBomb.GetComponent<Rigidbody>().isKinematic = false;
-        ActiveBomb.transform.localScale = Vector3.one;
+        //ActiveBomb.transform.localScale = Vector3.one;
         ActiveBomb.GetComponent<Rigidbody>().AddForce(playerCon.transform.forward * 2, ForceMode.Force);
 
     }

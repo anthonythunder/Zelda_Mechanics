@@ -8,6 +8,7 @@ public class PlayerAbilityManager : MonoBehaviour
     [SerializeField] private Magnesis magnesis;
     [SerializeField] private Bomb Squarebomb;
     [SerializeField] private Bomb Spherebomb;
+    [SerializeField] private Stasis stasis;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject SquareBomb_prefab;
@@ -45,6 +46,8 @@ public class PlayerAbilityManager : MonoBehaviour
                 Spherebomb.Activate(transform, SphereBomb_prefab);
                 break;
             case PlayerController.AbilityState.Stasis:
+                stasis.Activate(transform, null);
+                HandleAbilityUI(Magnesis_UI);
                 break;
             case PlayerController.AbilityState.Cyonis:
                 break;
@@ -63,6 +66,9 @@ public class PlayerAbilityManager : MonoBehaviour
             case 3:
                 Spherebomb.CancelAbility(transform);
                 break;
+            case 4:
+                stasis.CancelAbility(transform);
+                break;
         }
     }
     public void CancelAllAbility()
@@ -70,6 +76,7 @@ public class PlayerAbilityManager : MonoBehaviour
         magnesis.CancelAbility(transform);
         Squarebomb.CancelAbility(transform);
         Spherebomb.CancelAbility(transform);
+        stasis.CancelAbility(transform);
     }
     private void HandleAbilityUI(GameObject CurrentIU)
     {
