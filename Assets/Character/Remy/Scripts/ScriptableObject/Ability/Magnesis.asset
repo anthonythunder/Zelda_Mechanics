@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Magnesis
   Description: Magnet
+  isActive: 0
   MagnesisLayer:
     serializedVersion: 2
     m_Bits: 64
-  rayDistance: 100
+  _magnesisBulletPrefab: {fileID: 6243519851393415187, guid: b64ee76fa8acbd54f854d55d03665a92, type: 3}
+  _currentMagnesisBullet: {fileID: 0}

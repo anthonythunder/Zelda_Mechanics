@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
         {
             Gravity();
         }
+
+        SpawnPositions();
     }
     private Vector3 playerFwdDir;
     private void Locomotion()
@@ -168,15 +170,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
         Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = value;
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(GroundCheckTransform.position, GroundCheckRadius);
-
-        Gizmos.color = Color.green;
-        Vector3 CenterPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f));
-        Gizmos.DrawRay(Camera.main.transform.position,Camera.main.transform.forward * 19);
-    }
     private void CancelAbility(int index)
     {
         playerAbilityMng.CancelAbility(index);
@@ -193,6 +186,65 @@ public class PlayerController : MonoBehaviour, IPlayerController
         CineOF.VerticalAxis.Reset();
         CineOF.HorizontalAxis.Recentering.Enabled = Value;
         CineOF.VerticalAxis.Recentering.Enabled = Value;
+    }
+
+    public LayerMask ExcludePlayerLayer;
+    public Vector3 MagnesisProjectileStart;
+    public Vector3 PlayerCenterToScreenPos;
+    public Vector3 ScreenCenter;
+    public Ray PlayerCenterToScreen;
+
+    private Vector3 playerCenter;
+    private RaycastHit _hitScreenCenter;
+
+    private float rayDistance = 20;
+    private void SpawnPositions()
+    {
+        // Get center of player body
+        playerCenter = transform.position;
+        playerCenter.y += transform.localScale.y;
+
+        // Get  center of screen to Viewport
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out _hitScreenCenter, rayDistance, ExcludePlayerLayer))
+        {
+            ScreenCenter = _hitScreenCenter.point;
+        }
+
+        //Ray from player center to screen center
+
+        PlayerCenterToScreen = new Ray(playerCenter, (ScreenCenter - playerCenter).normalized);
+
+        // MagnesisProjectileStart
+
+        MagnesisProjectileStart = playerCenter + (ScreenCenter - playerCenter).normalized;
+        MagnesisProjectileStart.y = playerCenter.y;
+
+
+        // MagnesisProjectileStart
+
+        PlayerCenterToScreenPos = playerCenter + (ScreenCenter - playerCenter).normalized * 100;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(GroundCheckTransform.position, GroundCheckRadius);
+
+        Gizmos.color = Color.green;
+        Vector3 CenterPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f));
+        Gizmos.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 19);
+
+        Gizmos.color = Color.white;
+        Gizmos.DrawSphere(playerCenter, 0.1f);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(PlayerCenterToScreen);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(ScreenCenter, 0.1f);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(MagnesisProjectileStart, 0.1f);
     }
 }
 public struct PlayerInput

@@ -1,3 +1,4 @@
+using Unity.Properties;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Magnesis", menuName = "Scriptable Objects/Magnesis")]
@@ -5,18 +6,24 @@ public class Magnesis : AbilityPropertise
 {
     private IPlayerController playerAction;
     private PlayerController playerController;
+    private PlayerCameraMod _playerCameraMod;
     [SerializeField] private LayerMask MagnesisLayer;
     private RaycastHit _hitGetObject;
     private Vector3 rayEnd;
      private float rayDistance = 20;
 
-    private Transform    CurrentSelectedObj;
+    private Transform CurrentSelectedObj;
     private Vector3 ActiveObjPos;
     private Vector3 offset;
     private int MinDistance = 1;
     private int MaxDistance = 12;
     private float DistanceOffsetSpped = 10;
 
+    public GameObject _magnesisBulletPrefab;
+    private GameObject _currentMagnesisBullet;
+
+    private bool _shootMagnesisBullet = false;
+    public bool _controlObject;
     public override void Activate(Transform player, GameObject Magnet)
     {
         
@@ -24,9 +31,10 @@ public class Magnesis : AbilityPropertise
 
         if (playerAction == null) {playerAction = player.GetComponent<IPlayerController>(); }
         if (playerController == null) { playerController = player.GetComponent<PlayerController>(); }
-        
+        if (_playerCameraMod == null) { _playerCameraMod = player.GetComponent<PlayerCameraMod>(); }
 
-        if (CurrentSelectedObj != null)
+
+        if (CurrentSelectedObj != null && _controlObject)
         {
             CurrentSelectedObj.position = (player.position + offset);
             ActiveObjPos = CurrentSelectedObj.position + Vector3.up * playerAction.MouseInput.y;
@@ -52,13 +60,35 @@ public class Magnesis : AbilityPropertise
             playerController.ReCenterCamera(true);
         }
 
-        if (isActive) return;
+        if (_shootMagnesisBullet)
+        {
+            if (CurrentSelectedObj != null && _currentMagnesisBullet != null)
+            {
+                _currentMagnesisBullet.transform.position = Vector3.MoveTowards(_currentMagnesisBullet.transform.position, CurrentSelectedObj.transform.position, Time.deltaTime * 15);
+            }
+            else if(_currentMagnesisBullet != null)
+            {
+                _currentMagnesisBullet.transform.position = Vector3.MoveTowards(_currentMagnesisBullet.transform.position, playerController.PlayerCenterToScreenPos, Time.deltaTime * 15);
+            }
+        }
+
+        if (isActive ) return;
 
         if (Input.GetMouseButtonDown(0))
         {
+            //Shoot Magnesis bullet
+            if (!_currentMagnesisBullet) 
+            {
+                _currentMagnesisBullet = Instantiate(_magnesisBulletPrefab, playerController.MagnesisProjectileStart, Quaternion.identity);
+                _currentMagnesisBullet.GetComponent<Magnesisbullet>().magnesis = this;
+            } 
+
+            _shootMagnesisBullet = true;
+
             rayEnd = Camera.main.ScreenToViewportPoint(new Vector3(Screen.width * 0.5f, 0,Screen.height * 0.5f));
             if (Physics.Raycast(Camera.main.transform.position,Camera.main.transform.forward , out _hitGetObject, rayDistance, MagnesisLayer))
             {
+                
                 CurrentSelectedObj = _hitGetObject.transform;
                 CurrentSelectedObj.GetComponent<Rigidbody>().isKinematic = true;
                 offset = CurrentSelectedObj.position - player.position;
@@ -66,6 +96,7 @@ public class Magnesis : AbilityPropertise
                 isActive = true;
             }
         }
+        _playerCameraMod.SetCameraTrackimgTarget(_playerCameraMod._OTS_Target);
     }
     public override void CancelAbility( Transform player)
     {
@@ -80,6 +111,17 @@ public class Magnesis : AbilityPropertise
         }
         playerController.ReCenterCamera(false);
 
+        _playerCameraMod.SetCameraTrackimgTarget(_playerCameraMod._normalTarget);
+
+        //Destory any existing Bullet
+        if(_currentMagnesisBullet != null)
+        {
+            Destroy(_currentMagnesisBullet);
+        }
+
+
+        _shootMagnesisBullet = false;
+        _controlObject = false;
         isActive = false;
     }
     private float GetXZDistance(Vector3 a,Vector3 b)

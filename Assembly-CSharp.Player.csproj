@@ -64,12 +64,14 @@
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\Bomb.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\Magnesis.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\AbilityPropertise.cs" />
+    <Compile Include="Assets\Character\Remy\Scripts\PlayerCameraMod.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerAnimation.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\ScriptableObject\Stasis.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Model\Scripts\ObjecHealth.cs" />
     <Compile Include="Assets\Character\Remy\Scripts\PlayerAbilityManager.cs" />
+    <Compile Include="Assets\Model\Actor\MagnesisBullet\Script\Magnesisbullet.cs" />
     <Compile Include="Assets\Model\Ability\Bomb\Scripts\BombRune.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stasis : AbilityPropertise
 {
     private PlayerController playerController;
+    private PlayerCameraMod _playerCameraMod;
     private Rigidbody StasisObject;
 
     private bool isStasisActive = false;
@@ -21,10 +22,8 @@ public class Stasis : AbilityPropertise
     {
         base.Activate(player, statis);
 
-        if(playerController == null)
-        { 
-            playerController = player.GetComponent<PlayerController>();
-        }
+        if(playerController == null){ playerController = player.GetComponent<PlayerController>();}
+        if(_playerCameraMod == null){ _playerCameraMod = player.GetComponent<PlayerCameraMod>(); }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -55,11 +54,13 @@ public class Stasis : AbilityPropertise
                 StasisObject = null;
             }
         }
+        _playerCameraMod.SetCameraTrackimgTarget(_playerCameraMod._OTS_Target);
     }
     public override void CancelAbility(Transform player)
     {
         base.CancelAbility(player);
 
+        _playerCameraMod.SetCameraTrackimgTarget(_playerCameraMod._OTS_Target);
         isStasisActive = false;
     }
 }
