@@ -197,7 +197,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private Vector3 playerCenter;
     private RaycastHit _hitScreenCenter;
 
-    private float rayDistance = 20;
+    private float rayDistance = 100;
+
+
     private void SpawnPositions()
     {
         // Get center of player body
@@ -208,6 +210,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out _hitScreenCenter, rayDistance, ExcludePlayerLayer))
         {
             ScreenCenter = _hitScreenCenter.point;
+        }
+        else
+        {
+            ScreenCenter = Camera.main.transform.position + Camera.main.transform.forward * 30;
         }
 
         //Ray from player center to screen center

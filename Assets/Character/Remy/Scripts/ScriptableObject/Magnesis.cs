@@ -7,6 +7,7 @@ public class Magnesis : AbilityPropertise
     private IPlayerController playerAction;
     private PlayerController playerController;
     private PlayerCameraMod _playerCameraMod;
+    private PlayerAnimation _playerAnimation;
     [SerializeField] private LayerMask MagnesisLayer;
     private RaycastHit _hitGetObject;
     private Vector3 rayEnd;
@@ -22,7 +23,7 @@ public class Magnesis : AbilityPropertise
     public GameObject _magnesisBulletPrefab;
     private GameObject _currentMagnesisBullet;
 
-    private bool _shootMagnesisBullet = false;
+    public bool _shootMagnesisBullet = false;
     public bool _controlObject;
     public override void Activate(Transform player, GameObject Magnet)
     {
@@ -32,6 +33,7 @@ public class Magnesis : AbilityPropertise
         if (playerAction == null) {playerAction = player.GetComponent<IPlayerController>(); }
         if (playerController == null) { playerController = player.GetComponent<PlayerController>(); }
         if (_playerCameraMod == null) { _playerCameraMod = player.GetComponent<PlayerCameraMod>(); }
+        if (_playerAnimation == null) { _playerAnimation = player.GetComponent<PlayerAnimation>(); }
 
 
         if (CurrentSelectedObj != null && _controlObject)
@@ -62,6 +64,7 @@ public class Magnesis : AbilityPropertise
 
         if (_shootMagnesisBullet)
         {
+
             if (CurrentSelectedObj != null && _currentMagnesisBullet != null)
             {
                 _currentMagnesisBullet.transform.position = Vector3.MoveTowards(_currentMagnesisBullet.transform.position, CurrentSelectedObj.transform.position, Time.deltaTime * 15);
@@ -71,6 +74,8 @@ public class Magnesis : AbilityPropertise
                 _currentMagnesisBullet.transform.position = Vector3.MoveTowards(_currentMagnesisBullet.transform.position, playerController.PlayerCenterToScreenPos, Time.deltaTime * 15);
             }
         }
+        _playerAnimation.MagnesisBulletShoot(_shootMagnesisBullet);
+        _playerAnimation.MagnesisLocomotion(_controlObject);
 
         if (isActive ) return;
 
@@ -119,7 +124,8 @@ public class Magnesis : AbilityPropertise
             Destroy(_currentMagnesisBullet);
         }
 
-
+        _playerAnimation.MagnesisBulletShoot(false);
+        _playerAnimation.MagnesisLocomotion(false);
         _shootMagnesisBullet = false;
         _controlObject = false;
         isActive = false;
